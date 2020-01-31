@@ -92,8 +92,11 @@ class isoTopeFilter {
 
         if (typeof this.props.selected !== 'undefined') {
             for (let filterItem of this.props.selected.split(',')) {
-                self._addFilter(filterItem, false);
-                this._updateFilterEl(filterItem);
+                filterItem = filterItem.trim();
+                if (filterItem.length){
+                    self._addFilter(filterItem, false);
+                    this._updateFilterEl(filterItem);
+                }
             }
         }
 

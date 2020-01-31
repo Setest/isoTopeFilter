@@ -32,6 +32,7 @@ function _defineProperty(obj, key, value) {
  * Add filters from the box for isoTope
  *
  * Author Prishepenko Stepan: Setest <itman116@gmail.com> (https://github.com/Setest/)
+ * Since 2020-01-31
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * https://isotope.metafizzy.co
  */
@@ -113,10 +114,13 @@ var isoTopeFilter = function isoTopeFilter(props) {
             try {
                 for (var _iterator = this.props.selected.split(',')[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
                     var filterItem = _step.value;
+                    filterItem = filterItem.trim();
 
-                    self._addFilter(filterItem, false);
+                    if (filterItem.length) {
+                        self._addFilter(filterItem, false);
 
-                    this._updateFilterEl(filterItem);
+                        this._updateFilterEl(filterItem);
+                    }
                 }
             } catch (err) {
                 _didIteratorError = true;
