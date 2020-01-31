@@ -11,6 +11,8 @@ See [isotope.metafizzy.co](https://isotope.metafizzy.co) for complete docs and d
 в случае множественного вызова на странице, позволяет связывать столько фильтров и сеток на одной странице
 сколько это нужно.
 
+![Farmers Market Finder Demo](images/demo.gif)
+
 ## Install
 
 ### Link
